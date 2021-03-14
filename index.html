@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Random person generator</title>
+  </head>
+  <body>
+    <div id="app">
+      <img :src="image" alt="" :class="`image ${gender}`" />
+      <!-- : is the same as vbind: -->
+      <h1 class="name">{{name}} {{lastName}}</h1>
+      <p class="email">{{email}}</p>
+      <button class="btn" v-on:click="getUser()" :class="`${gender}`">
+        Get Random User
+      </button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3.0.5"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
